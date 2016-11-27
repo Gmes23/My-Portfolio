@@ -1,0 +1,49 @@
+<div class="navBar">
+  <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+</div>
+
+<div class="menu-spoiler">
+  <div class="navBar-Showing">
+    <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+  </div>
+  <ul class="gmHref">
+    <li><a href="/" class="gmHrefW"> Main </a></li>
+    <li><a href="/portfolio" class="gmHrefW"> Portfolio </a></li>
+    <li><a href="/contact" class="gmHrefW"> Contact </a></li>
+    <li><a href="/about" class="gmHrefW"> About </a></li>
+  </ul>
+
+  <div id="d1">
+   <div class="c1">
+          <a><img src="/assets/img/boatRiver.jpg"></img></a>
+          <a><img src="/assets/img/spaceMan.jpg"></img></a>
+          <a><img src="/assets/img/cityRain.jpg"></img></a>
+          <a><img src="/assets/img/RedForest.jpg"></img></a>
+   </div>
+</div>
+</div>
+<div id="d"></div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+var $images = [];
+$("#d1 > .c1 > a").each(function() {
+    $images.push($("img", this).attr("src"));
+});
+var $length = $images.length;
+var $imgShow = 0;
+$("#d1 > .c1").html( $("#d1 > .c1 > a:first") );
+$(".navBar").click(function () {
+    $("img").attr("src", $images[++$imgShow % $length]);
+    $(".menu-spoiler").fadeIn(500);
+});
+
+$(".navBar-Showing").click(function () {
+    $(".menu-spoiler").fadeOut(500);
+});
+
+</script>
