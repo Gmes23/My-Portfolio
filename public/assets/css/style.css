@@ -201,9 +201,10 @@ img {
 #mePlace {
   position: absolute;
   top: 80px;
-  left: 41.24vw;
+  left: 44.24vw;
   width: 200px;
   height: 200px;
+  background-image: url("../img/me-2.png");
   border-radius: 50%;
 }
 
