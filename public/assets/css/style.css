@@ -218,8 +218,6 @@ img {
   top: 0px;
   height: 200px;
   width: 100%;
-  background-color: red;
-
 }
 
 .gmStats > ul{
@@ -238,21 +236,11 @@ img {
    -webkit-font-smoothing: antialiased;
 }
 
-.portViewer {
-  position: absolute;
-  top:100px;
-  height: 800px;
-  width: 80vw;
-  margin: 150px;
-  background-color: black;
-
-}
-
 
 .gmStats > ul > li  {
     display: inline-block;
     position: relative;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
 }
 .gmStats > ul > li:before {
     content: '';
@@ -286,38 +274,25 @@ img {
     transition: width 0s ease;
 }
 
-.gmPro-List {
+
+.gm-Project-1{
   position: absolute;
-  left: 50px;
-  list-style-type: none;
-  -webkit-column-count: 3;
-     -moz-column-count: 3;
-          column-count: 3;
-}
-
-.gmPro-List > li {
-  display: inline-block;
-  height: 400px;
-  width: 400px;
-  margin: 10px;
-  background-color: white;
-}
-
-.gmPro-List > li > img {
-  opacity: 1.0;
-  top: 0px;
-  width: 100%;
-  height: 100%;
+  top: 220px;
+  left: 330px;
+  margin: 50px;
+  height: 500px;
+  width: 500px;
+  background-image: url("../img/gmProject-1-Copy.png");
 }
 
 
 .gmPro-Des-Section {
+  display: none;
   position: absolute;
-  right: 0px;
+  right: 100px;
   top: 35%;
   width: 400px;
   height: 650px;
-  background-color: blue;
 }
 
 .gmPro-Des-Section > .proTitle >h1 {
@@ -331,5 +306,140 @@ img {
 .gmPro-Des-Section > .proDes > p {
   margin: 35px;
   line-height: 35px;
+  font-size: 16px;
+}
 
+.contactHolder {
+  position: absolute;
+  top: 45%;
+  left: 40%;
+}
+
+.contactHolder > h1{
+  border:none;
+  font-size: 40px;
+  color: black;
+}
+
+.contactHolder > h1>button {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+.mainContactButton {
+  font-family: 'Bungee Inline', cursive;
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
+}
+.mainContactButton:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+.mainContactButton:hover:after {
+	width: 100%;
+	background: black;
+}
+
+.aboutFooter {
+  position: absolute;
+  z-index: -9000;
+  bottom: 0px;
+  width: 100%;
+  height: 70%;
+  background-image: url('../img/aboutFooterTrans.png')
+}
+
+.contactHeader{
+  position: absolute;
+  opacity: .9;
+  z-index: -9000;
+  top: 0px;
+  width: 100%;
+  height: 80%;
+  /*background-image: url('../img/moonMan1.jpg')if time finish this*/
+}
+/*.fade-scale {
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+}
+
+.fade-scale.in {
+  opacity: 1;
+  transform: scale(1);
+}*/
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 33%;
+    top: 25%;
+    width: 500px;
+    height: 500px;
+    opacity: 1;
+    -webkit-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.0);
+    overflow-y:hidden;
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#gmSubmit{
+    width: 100%;
+    background-color: rgb(255,127,0);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }

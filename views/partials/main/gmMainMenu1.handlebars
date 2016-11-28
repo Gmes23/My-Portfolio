@@ -24,26 +24,3 @@
 </div>
 <div id="d"></div>
 </div>
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript">
-
-var $images = [];
-$("#d1 > .c1 > a").each(function() {
-    $images.push($("img", this).attr("src"));
-});
-var $length = $images.length;
-var $imgShow = 0;
-$("#d1 > .c1").html( $("#d1 > .c1 > a:first") );
-$(".navBar").click(function () {
-    $("img").attr("src", $images[++$imgShow % $length]);
-    $(".menu-spoiler").fadeIn(500);
-});
-
-$(".navBar-Showing").click(function () {
-    $(".menu-spoiler").fadeOut(500);
-});
-
-</script>
