@@ -6,6 +6,7 @@ var exphbs = require('express-handlebars');
 var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 var app = express();
+var routes = require('./controllers/controller.js');
 var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: false}));
@@ -19,23 +20,7 @@ app.set('view engine', 'handlebars');
 
 app.listen(PORT);
 
-app.get('/', function(req, res) {
-  res.render('index'); //remember to change this to routes
-})
 
-app.get('/portfolio', function(req, res) {
-  res.render('portfolioHandle'); //remember to change this to routes
-})
-
-app.get('/about', function(req, res) {
-  res.render('aboutHandle'); //remember to change this to routes
-})
-
-app.get('/contact', function(req, res) {
-  res.render('contactHandle'); //remember to change this to routes
-})
-
-
-
+app.use('/', routes);
 
 console.log("listening on port" + PORT);

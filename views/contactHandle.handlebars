@@ -19,18 +19,15 @@
   <div class="modal-content">
     <span class="close">x</span>
 
-    <form action="action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="gmName" name="firstname">
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="gmLName" name="lastname">
-
-    <label for="gmEmail">Email</label>
-    <input type="text" id="gmEmail" name="gmEmail-C">
-
-    <button type="submit" id="gmSubmit"value="Submit"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
-  </form>
+    <form method="POST" action="/sendContact">
+      <label for="gmEmail">Email</label>
+      <input type="text" id="gmEmail" name="gmEmail2">
+      <label for="fname">Name </label>
+      <input type="text" id="gmName" name="firstname">
+      <textarea placeholder="Message" class="gmMessage" name="gmMessage">
+      </textarea>
+      <button type="submit" id="gmSubmit" value="Submit" method="POST" action="/sendContact" rows="6" cols="100"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+    </form>
   </div>
 
 </div>
